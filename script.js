@@ -1,8 +1,10 @@
 let comecar_parar = document.querySelector("#comecar_parar");
 let zerar = document.querySelector("#zerar");
 let cronometro = document.querySelector("#cronometro");
+let anoSpan = document.querySelector("span");
 let iniciado = false, hora_inicio, hora_atual, init_cronometro, tempo_passado, horas, minutos, segundos, milisegundos;
 
+anoSpan.innerHTML = new Date().getFullYear();
 
 function adicionar_zero(number){
     if(number>=0 && number<=9){
