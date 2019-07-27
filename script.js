@@ -1,4 +1,5 @@
 let comecar_parar = document.querySelector("#comecar_parar");
+let zerar = document.querySelector("#zerar");
 let cronometro = document.querySelector("#cronometro");
 let iniciado = false, hora_inicio, hora_atual, init_cronometro, tempo_passado;
 
@@ -31,3 +32,11 @@ function controlar(){
 }
 
 comecar_parar.onclick = controlar;
+
+function zerar_cronometro(){
+    tempo_passado = 0;
+    hora_inicio = new Date().getTime();
+    cronometro.innerHTML =  tempo_passado;
+}
+
+zerar.onclick = zerar_cronometro;
