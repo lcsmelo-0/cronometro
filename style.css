@@ -1,0 +1,47 @@
+body{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+section{
+    align-items: center;
+    background-color: grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    width: 500px;
+}
+
+section #botoes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    width: 80%;
+}
+
+button{
+    background-color: rgb(21, 129, 21);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14pt;
+    height: 50px;
+    width: 150px;
+}
+
+button:hover{
+    background-color: rgb(29, 161, 29);
+
+}
+
+section #cronometro{
+    color: white;
+    font-size: 26pt;
+}
