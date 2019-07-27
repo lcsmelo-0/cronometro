@@ -29,19 +29,19 @@ function controlar(){
             hora_atual = new Date().getTime();
             tempo_passado = hora_atual - hora_inicio;
 
-            horas = Math.floor(tempo_passado / 3600000);
+            horas = adicionar_zero(Math.floor(tempo_passado / 3600000));
             resto = tempo_passado - (horas * 3600000);
 
-            minutos = Math.floor(resto / 60000);
+            minutos = adicionar_zero(Math.floor(resto / 60000));
             resto -= (minutos*60000);
 
-            segundos = Math.floor(resto / 1000);
+            segundos = adicionar_zero(Math.floor(resto / 1000));
             resto -= (segundos*1000);
 
-            milisegundos = resto;
+            milisegundos = adicionar_zero(resto);
 
 
-            cronometro.innerHTML= tempo_passado;
+            cronometro.innerHTML= `${horas}:${minutos}:${segundos} ${milisegundos}` ;
         }, 10);
 
     } else {
