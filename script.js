@@ -1,8 +1,16 @@
 let comecar_parar = document.querySelector("#comecar_parar");
 let zerar = document.querySelector("#zerar");
 let cronometro = document.querySelector("#cronometro");
-let iniciado = false, hora_inicio, hora_atual, init_cronometro, tempo_passado;
+let iniciado = false, hora_inicio, hora_atual, init_cronometro, tempo_passado, horas, minutos, segundos, milisegundos;
 
+
+function adicionar_zero(number){
+    if(number>=0 && number<=9){
+        return "0" + number.toString();
+    } else {
+        return number.toString();
+    }
+}
 
 function controlar(){
     if(!iniciado){
@@ -21,10 +29,22 @@ function controlar(){
             hora_atual = new Date().getTime();
             tempo_passado = hora_atual - hora_inicio;
 
+            horas = Math.floor(tempo_passado / 3600000);
+            resto = tempo_passado - (horas * 3600000);
+
+            minutos = Math.floor(resto / 60000);
+            resto -= (minutos*60000);
+
+            segundos = Math.floor(resto / 1000);
+            resto -= (segundos*1000);
+
+            milisegundos = resto;
+
+
             cronometro.innerHTML= tempo_passado;
         }, 10);
 
-    } else{
+    } else {
         clearInterval(init_cronometro);
         iniciado = false;
         comecar_parar.innerHTML = "Começar"
