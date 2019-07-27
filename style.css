@@ -44,4 +44,11 @@ button:hover{
 section #cronometro{
     color: white;
     font-size: 26pt;
+    font-weight: bold;
+    padding: 20px;
+    display: inline-block;
+    width: 200px;
+    max-width: 100%;
+}
+
 }

@@ -56,7 +56,7 @@ comecar_parar.onclick = controlar;
 function zerar_cronometro(){
     tempo_passado = 0;
     hora_inicio = new Date().getTime();
-    cronometro.innerHTML =  tempo_passado;
+    cronometro.innerHTML =  "00:00:00 00";
 }
 
 zerar.onclick = zerar_cronometro;
