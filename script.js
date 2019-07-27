@@ -9,7 +9,11 @@ function controlar(){
         comecar_parar.innerHTML = "Parar";
 
         //Começar o cronômetro
-        hora_inicio = new Date().getTime();
+        if(!hora_inicio){
+            hora_inicio = new Date().getTime();
+        } else{
+            hora_inicio = new Date().getTime() - tempo_passado;
+        }
 
         init_cronometro = setInterval(() => {
 
